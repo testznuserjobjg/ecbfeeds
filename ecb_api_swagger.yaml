@@ -1,0 +1,75 @@
+swagger: "2.0"
+info:
+  description: "RSS news feeds - ECB - European Central Bank"
+  version: "1.0.0"
+  title: "Swagger ECB"
+  license:
+    name: "Apache 2.0"
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+host: "petstore.swagger.io"
+basePath: "/"
+tags:
+- name: "ECB"
+  description: "Everything about ECB"
+schemes:
+- "http"
+paths:
+  /ecb:
+    get:
+      tags:
+      - "rate"
+      summary: "Get rate of currency"
+      description: "Get rate of currency"
+      operationId: "getRate"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "currency"
+        in: "query"
+        description: "Get currency rate."
+        required: true
+        type: "string"
+        collectionFormat: "multi"
+      responses:
+        200:
+          description: "successful operation"
+        400:
+          description: "Invalid status value"
+    put:
+      tags:
+      - "refresh"
+      summary: "Update exchange rate"
+      description: ""
+      operationId: "updateExchange"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/xml"
+      responses:
+        405:
+          description: "Validation exception"
+  /ecb/history:
+    get:
+      tags:
+      - "rate history"
+      summary: "Get rate of currency"
+      description: "Get rate history of currency"
+      operationId: "getRateHistory"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "currency"
+        in: "query"
+        description: "Get currency hitory rate."
+        required: true
+        type: "string"
+        collectionFormat: "multi"
+      responses:
+        200:
+          description: "successful operation"
+        400:
+          description: "Invalid status value"
+
+externalDocs:
+  description: "Find out more about Swagger"
+  url: "http://swagger.io"

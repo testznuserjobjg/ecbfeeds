@@ -1,0 +1,7 @@
+# Artifacts
+/venv/
+/venv-dev/
+*.deb
+*.idea
+__py_chache__/
+

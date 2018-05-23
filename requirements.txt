@@ -1,0 +1,10 @@
+flask==1.0
+feedparser==5.2.1
+flask-restful
+elasticsearch>=6.0.0,<7.0.0
+swagger-py-codegen
+Jinja2
+jsonschema
+six
+flask-script
+flask-sqlalchemy
