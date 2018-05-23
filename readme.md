@@ -14,10 +14,10 @@ API has been defined by Swagger. See: ecb_api_swager.yaml
 * First call PUT in API to get RSS feeds to index
 * Second use GET to retrieve RSS in JSON format
 
-'''
+```
 127.0.0.1 - - [23/May/2018 11:57:32] "PUT /ecb HTTP/1.1" 200 -
 127.0.0.1 - - [23/May/2018 11:57:39] "GET /ecb?currency=usd HTTP/1.1" 200 -
-'''
+```
 
 ## Unittest
 You can run them from src/ecb/api/unittests/api_tests.py
